@@ -278,7 +278,7 @@ EOF
 
 
 ###  <main> ###
-if false ; then
+if true ; then
 
   # prepareation of reference data
   prepare_promoter_and_exon
