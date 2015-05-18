@@ -13,8 +13,8 @@
 # You can run this script as below:
 #     $ mkdir NEW_DIR
 #     $ cd NEW_DIR
-#     $ git clone ...
-#     $ sh xx_run.sh
+#     $ wget https://raw.githubusercontent.com/hkawaji/2015-SaiboKogaku-Suppl/master/00run.sh
+#     $ sh 00run.sh
 # on the computer where the software below is installed 
 #
 #
@@ -305,7 +305,7 @@ if true ; then
   prep_dgeLset xxA_dgeLset.RData
 
   # plot
-  plotClust xxA_dgeLset.RData xx_plot.pdf
+  plotClust xxA_dgeLset.RData 09plot.pdf
   rm -f xxA_dgeLset.RData
 
 fi
