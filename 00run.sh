@@ -45,7 +45,6 @@ obtain_RefSeq() {
 }
 
 prepare_promoter_and_exon() {
-  obtain_RefSeq
 
     # prep promoter regions
     gunzip -c refFlat.txt.gz \
