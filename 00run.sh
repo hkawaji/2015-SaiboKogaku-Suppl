@@ -45,6 +45,7 @@ obtain_RefSeq() {
 }
 
 prepare_promoter_and_exon() {
+    obtain_RefSeq
 
     # prep promoter regions
     gunzip -c refFlat.txt.gz \
@@ -283,7 +284,6 @@ if true ; then
   prepare_promoter_and_exon
 
   # download data
-  obtain_RefSeq
   obtain_TSS_counts_CAGE
   obtain_RNAseq_alignment
 
