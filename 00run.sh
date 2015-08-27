@@ -83,7 +83,7 @@ count_promoter_read ()
            +  \
            $(bigWigToBedGraph $infileRev /dev/stdout \
            | awk '{ sum = sum + $4 * ($3 - $2) }END{print sum}' ) " | bc )
-    echo "01STAT:MAPPED\t$sum" > .tmp$$
+    printf "01STAT:MAPPED\t%d", $sum > .tmp$$
 
     # count on foward strand
     gunzip -c refFlat.promoter.bed.gz \
@@ -137,7 +137,7 @@ count_exon_read ()
 
     # set library size as total counts of mapped reads
     sum=$(samtools view -q 20 ${infile}  | wc -l)
-    echo "01STAT:MAPPED\t$sum" > .tmp$$
+    printf "01STAT:MAPPED\t%d", $sum > .tmp$$
 
     # counts in each exon (htseq can be used nowadays)
     samtools view -uq 20 ${infile}  \
